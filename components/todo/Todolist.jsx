@@ -1,12 +1,18 @@
+import TodoItem from "./TodoItem";
 
-const Todolist = () => {
+const Todolist = ({ title, todos }) => {
   return (
-    <div>
-      <ul>
-        
+    <>
+      <h1>{title}</h1>
+      <ul id="postit-list">
+        {todos.map((todo) => (
+          <li key={todo.id}>
+            <TodoItem todo={todo} />
+          </li>
+        ))}
       </ul>
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default Todolist
+export default Todolist;

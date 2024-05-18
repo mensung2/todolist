@@ -25,8 +25,8 @@ const Todocontainer = () => {
     <>
       <Todoform setTodos={setTodos} />
       <div id="todobody">
-        <Todolist title="Working" todos={workingTodos} />
-        <Todolist title="Done" todos={doneTodos} />
+        <Todolist title="Working" todos={workingTodos} setTodos={setTodos} />
+        <Todolist title="Done" todos={doneTodos} setTodos={setTodos} />
       </div>
     </>
   );

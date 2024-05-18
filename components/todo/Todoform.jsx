@@ -6,6 +6,8 @@ const Todoform = ({setTodos}) => {
     const title = formData.get("title");
     const content = formData.get("content");
 
+    if(!title.trim(), !content.trim() ) return alert("제목과 내용을 입력하세요.");
+
     const nextTodo = {
       id: crypto.randomUUID(),
       title,
